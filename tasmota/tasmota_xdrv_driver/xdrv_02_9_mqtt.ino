@@ -225,8 +225,6 @@ void MqttInit(void) {
   Settings->mqtt_port = 8883;
 #endif //USE_MQTT_AZURE_IOT
 
-  // Initialize MQTT client ID with ESP Chip ID
-  snprintf_P(mqtt_client, sizeof(mqtt_client), PSTR(MQTT_CLIENT_ID), ESP_getChipId());
 
 #ifdef USE_MQTT_TLS
   bool aws_iot_host = false;
